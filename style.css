@@ -1,0 +1,93 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: url('https://files.catbox.moe/7bgsi0.jpg') no-repeat center center/cover;
+  color: white;
+  overflow-x: hidden;
+}
+.blur-bg {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
+  box-shadow: 0 0 20px #0ff;
+  animation: fadeIn 2s ease;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #0ff;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease;
+  text-shadow: 0 0 10px #0ff;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tab {
+  background: #0ff2;
+  padding: 10px 20px;
+  border: 2px solid #0ff;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tab:hover {
+  background: #0ff5;
+}
+.content {
+  display: none;
+  margin-top: 2rem;
+}
+.active {
+  display: block;
+}
+.social-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  background: #0ff;
+  color: black;
+  box-shadow: 0 0 15px #0ff;
+}
+.social-buttons a:hover {
+  background: #00ffff88;
+  color: white;
+  transform: scale(1.1);
+}
+.bio {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ccc;
+}
+.luxz-info {
+  margin-top: 25px;
+  padding: 1.5rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid #0ff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #0ff;
+  display: none;
+  animation: fadeIn 1s ease;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #eee;
+}
+.show {
+  display: block;
+}

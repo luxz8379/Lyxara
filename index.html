@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxz Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="blur-bg">
+    <h1>Welcome Bro<br>Ty For Your Support</h1>
+
+    <div class="tab-container">
+      <div class="tab" onclick="showTab(0)">🏠 Home</div>
+      <div class="tab" onclick="showTab(1)">🔗 Bio</div>
+      <div class="tab" onclick="showTab(2)">🧪 Bug Tools</div>
+    </div>
+
+    <!-- Tab 0: Home -->
+    <div id="tab-0" class="content active">
+      <p style="margin-top: 20px;">Halo! Ini adalah halaman resmi dari <strong>Luxz</strong>. Terima kasih sudah mampir bro!</p>
+      <div style="margin-top: 30px;">
+        <a class="tab" onclick="showTab(1)">Get Started 🚀</a>
+      </div>
+    </div>
+
+    <!-- Tab 1: Bio -->
+    <div id="tab-1" class="content">
+      <div class="social-buttons">
+        <a href="https://tiktok.com/@dizkaez" target="_blank">TikTok</a>
+        <a href="https://instagram.com/dizkaez" target="_blank">Instagram</a>
+        <a href="https://wa.me/628815241960" target="_blank">WhatsApp</a>
+        <a class="tab" onclick="toggleLuxz()">Siapah Luxz?</a>
+      </div>
+
+      <div class="bio">
+        <p>📍 Bandung, Jawa Barat</p>
+        <p>📛 Nama: <strong>Luxz</strong></p>
+      </div>
+
+      <div id="luxz-box" class="luxz-info">
+        Luxz adalah seorang pemuda dari Bandung, Jawa Barat yang hobi dunia digital. Awalnya cuma suka utak-atik HTML buat iseng, tapi sekarang mulai serius bikin karya.  
+        Dia punya cita-cita jadi developer kreatif, dan luxz mempunyai teman dev nya yang bernama  <strong>winter</strong>.
+      </div>
+    </div>
+
+    <!-- Tab 2: Bug Tools -->
+    <div id="tab-2" class="content">
+      <h2 style="color:#0ff; margin-bottom: 10px;">🧪 Bug Tools</h2>
+      <p>Tekan salah satu tombol bug di bawah ini untuk langsung kirim via WhatsApp:</p>
+      <div class="social-buttons" style="margin-top: 20px;">
+        <a href="https://wa.me/628815241960?text=Bug+WhatsApp+Web+Freeze" target="_blank">💥 Bug Web Freeze</a>
+        <a href="https://wa.me/628815241960?text=Bug+Delay+Crash+Chat" target="_blank">🧱 Bug Crash Delay</a>
+        <a href="https://wa.me/628815241960?text=Bug+Status+Read+Invisible" target="_blank">🧬 Bug Read Status</a>
+        <a href="https://wa.me/628815241960?text=Bug+Auto+Reaction+WA" target="_blank">🔮 Bug Auto Reaction</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(index) {
+      document.querySelectorAll('.content').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+      });
+    }
+    function toggleLuxz() {
+      const box = document.getElementById('luxz-box');
+      box.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
